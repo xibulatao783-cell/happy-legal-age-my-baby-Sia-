@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  color: #f4faff;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top, rgba(173, 216, 255, 0.35), transparent 30%),
+    linear-gradient(160deg, #020617 0%, #08152b 40%, #0c3b73 100%);
+}
+
+.page {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.background::before,
+.background::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.background::before {
+  width: 320px;
+  height: 320px;
+  left: -60px;
+  top: -60px;
+  background: rgba(125, 211, 252, 0.25);
+}
+
+.background::after {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  bottom: -120px;
+  background: rgba(59, 130, 246, 0.22);
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255, 206, 230, 0.75);
+  font-size: 20px;
+  animation: floatUp linear infinite;
+}
+
+.h1 { left: 8%; top: 80%; animation-duration: 7s; }
+.h2 { left: 22%; top: 90%; animation-duration: 9s; }
+.h3 { left: 40%; top: 84%; animation-duration: 8s; }
+.h4 { left: 58%; top: 92%; animation-duration: 10s; }
+.h5 { left: 76%; top: 86%; animation-duration: 7.5s; }
+.h6 { left: 90%; top: 90%; animation-duration: 9.5s; }
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.intro,
+.reveal {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-card {
+  max-width: 760px;
+  width: 100%;
+  text-align: center;
+  padding: 56px 36px;
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.08));
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 32px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 30px 100px rgba(0,0,0,0.25);
+}
+
+.glass-mini {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+}
+
+.eyebrow {
+  letter-spacing: 0.35em;
+  font-size: 12px;
+  color: rgba(226, 240, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 5.4rem);
+  line-height: 0.95;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: clamp(2.7rem, 6vw, 4.8rem);
+  line-height: 0.95;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+h1 span,
+h2 span {
+  color: #cbe9ff;
+}
+
+.subtext {
+  max-width: 560px;
+  margin: 0 auto 28px;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(238, 247, 255, 0.82);
+}
+
+.password-box {
+  max-width: 360px;
+  margin: 0 auto 28px;
+  text-align: left;
+}
+
+.password-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: rgba(238, 247, 255, 0.9);
+}
+
+.password-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.12);
+  color: white;
+  outline: none;
+  font-size: 1rem;
+}
+
+.password-input::placeholder {
+  color: rgba(255,255,255,0.55);
+}
+
+.password-input:focus {
+  border-color: rgba(186, 230, 253, 0.9);
+  box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.18);
+}
+
+.error-message {
+  min-height: 22px;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #ffd1e3;
+}
+
+.envelope-btn {
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.12);
+  color: white;
+  border-radius: 26px;
+  padding: 18px 24px;
+  min-width: 280px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 18px 50px rgba(56, 189, 248, 0.18);
+}
+
+.envelope-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: rgba(255,255,255,0.18);
+}
+
+.icon {
+  font-size: 32px;
+}
+
+.btn-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.btn-text strong {
+  font-size: 1.4rem;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.btn-text small {
+  font-size: 0.88rem;
+  color: rgba(234, 244, 255, 0.8);
+}
+
+.message-card {
+  max-width: 900px;
+  width: 100%;
+  padding: 42px 32px;
+}
+
+.full-card {
+  text-align: center;
+}
+
+.message {
+  font-size: 1rem;
+  line-height: 1.95;
+  color: rgba(240, 248, 255, 0.88);
+}
+
+.signature {
+  margin-top: 24px;
+  color: #ffd4e8;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.glass-mini p {
+  color: rgba(240, 248, 255, 0.82);
+  line-height: 1.8;
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .intro-card,
+  .message-card {
+    padding: 32px 22px;
+  }
+
+  .password-box {
+    max-width: 100%;
+  }
+
+  .envelope-btn {
+    min-width: 100%;
+  }
+}
