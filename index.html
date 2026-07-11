@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Sofia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background">
+    <span class="heart h1">❤</span>
+    <span class="heart h2">❤</span>
+    <span class="heart h3">❤</span>
+    <span class="heart h4">❤</span>
+    <span class="heart h5">❤</span>
+    <span class="heart h6">❤</span>
+  </div>
+
+  <main class="page">
+    <section class="intro" id="intro">
+      <div class="glass-card intro-card">
+        <p class="eyebrow">A LITTLE LOVE NOTE FOR SOFIA</p>
+        <h1>Happy 18th, <span>Sofia</span></h1>
+        <p class="subtext">
+          A sweet blue birthday surprise with love and a special message from Xi.
+        </p>
+
+        <div class="password-box">
+          <label for="passwordInput" class="password-label">Enter password first</label>
+          <input
+            type="password"
+            id="passwordInput"
+            class="password-input"
+            placeholder="Enter password"
+          />
+          <p id="errorMessage" class="error-message"></p>
+        </div>
+
+        <button id="openBtn" class="envelope-btn">
+          <span class="icon">✉</span>
+          <span class="btn-text">
+            <strong>Envelope</strong>
+            <small>Tap to open your birthday message</small>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section class="reveal hidden" id="reveal">
+      <div class="glass-card message-card full-card">
+        <p class="eyebrow">FOR THE PRETTIEST EIGHTEEN</p>
+        <h2>Happy Birthday, <span>Sofia</span></h2>
+
+        <p class="message">
+          Happy 18th Birthday, my baby, Sofia. I'm so proud of the amazing woman you're becoming.
+          Even if I can't be there with you today, my heart is celebrating beside yours.
+          Thank you for letting me love you.
+          I hope this year brings you endless happiness, peace, and dreams that come true.
+          Always remember that you are deeply loved.
+          I love you so much.
+          Happy birthday, baby.
+        </p>
+
+        <div class="signature">With all my love, Xi</div>
+
+        <div class="glass-mini">
+          <h3>A wish for this year</h3>
+          <p>
+            May your days feel soft, your heart feel full,
+            and every dream ahead of you come true.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
